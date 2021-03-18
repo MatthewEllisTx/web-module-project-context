@@ -16,7 +16,7 @@ function App() {
 	const addItem = item => {
 		// add the given item to the cart
 		console.log(item)
-		if(cart.filter( product => product.id === item.id).length === 0)
+		if(cart.filter( product => product.id === item.id).length === 0) // no duplicates in cart
 			setCart([ ...cart, item ])
 	};
 
