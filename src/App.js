@@ -20,10 +20,15 @@ function App() {
 			setCart([ ...cart, item ])
 	};
 
+	function removeItem(itemID){
+		setCart(cart.filter( product => product.id !== itemID))
+	}
+
 	const providerValues = {
 		cart,
 		products,
 		addItem,
+		removeItem,
 	}
 
 	return (
