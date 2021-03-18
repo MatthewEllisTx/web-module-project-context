@@ -13,6 +13,9 @@ function App() {
 
 	const addItem = item => {
 		// add the given item to the cart
+		console.log(item)
+		if(cart.filter( product => product.id === item.id).length === 0)
+			setCart([ ...cart, item ])
 	};
 
 	return (
